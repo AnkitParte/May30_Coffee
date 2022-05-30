@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Checkout</title>
+  </head>
+
+  <body>
+    <div id="order-form">
+      <!--Add your form html element here-->
+      <!--In form, give #name,#number and #address as HTML id's to relevant input elements -->
+      <!-- confirm button with id "confirm" -->
+      <form id="form" >
+        <input type="text" name="" id="name" placeholder="Your name">
+        <input type="text" name="" id="number" placeholder="contact number">
+        <input type="text" name="" id="address" placeholder="your address">
+        <input type="submit" name="" id="confirm" value="confirm order">
+      </form>
+    </div>
+    <button onclick="five()">home</button>
+  </body>
+</html>
+<script>
+let form=document.getElementById("form");
+// form.addEventListener("submit",function(){
+//   orderPlaced();
+// });
+form.addEventListener("submit",orderPlaced);
+
+let id;
+
+function orderPlaced(){
+  let name=document.getElementById("name");
+   
+  
+  alert("Your order is accepted");
+
+  one();
+  two();
+  three();
+  four();
+}
+function five(){
+  location.href="index.html";
+}
+function one(){
+  id=setTimeout(alert("Your order is being prepared"),3000)
+  clearTimeout(id);
+}
+function two(){
+  id=setTimeout(alert("Your order is being packed"),8000)
+  clearTimeout(id);
+}
+function three(){
+  id=setTimeout(alert("Your order is out for delivery"),10000)
+  clearTimeout(id);
+}
+function four(){
+  id=setTimeout(alert("Order delivered"),12000)
+  clearTimeout(id);
+}
+
+
+</script>
